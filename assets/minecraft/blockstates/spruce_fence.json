@@ -1,0 +1,98 @@
+{
+  "multipart": [
+    {
+      "when": {
+        "OR": [
+          {
+            "north": "true",
+            "east": "true"
+          },
+          {
+            "east": "true",
+            "south": "true"
+          },
+          {
+            "south": "true",
+            "west": "true"
+          },
+          {
+            "north": "true",
+            "west": "true"
+          },
+          {
+            "north": "true",
+            "east": "false",
+            "south": "false",
+            "west": "false"
+          },
+          {
+            "north": "false",
+            "east": "true",
+            "south": "false",
+            "west": "false"
+          },
+          {
+            "north": "false",
+            "east": "false",
+            "south": "true",
+            "west": "false"
+          },
+          {
+            "north": "false",
+            "east": "false",
+            "south": "false",
+            "west": "true"
+          },
+          {
+            "north": "false",
+            "east": "false",
+            "south": "false",
+            "west": "false"
+          }
+        ]
+      },
+      "apply": {
+        "model": "minecraft:block/spruce_fence_post"
+      }
+    },
+    {
+      "when": {
+        "north": "true"
+      },
+      "apply": {
+        "model": "minecraft:block/spruce_fence_side",
+        "uvlock": true
+      }
+    },
+    {
+      "when": {
+        "east": "true"
+      },
+      "apply": {
+        "model": "minecraft:block/spruce_fence_side",
+        "y": 90,
+        "uvlock": true
+      }
+    },
+    {
+      "when": {
+        "south": "true"
+      },
+      "apply": {
+        "model": "minecraft:block/spruce_fence_side",
+        "y": 180,
+        "uvlock": true
+      }
+    },
+    {
+      "when": {
+        "west": "true"
+      },
+      "apply": {
+        "model": "minecraft:block/spruce_fence_side",
+        "y": 270,
+        "uvlock": true
+      }
+    }
+  ]
+}
